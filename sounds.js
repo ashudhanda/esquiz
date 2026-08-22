@@ -112,6 +112,20 @@ window.SoundManager = (function () {
     /* ── Lifecycle ─────────────────────────────────────────────── */
 
     /**
+     * Play a single shaped tone and clean up automatically.
+     * 
+     * @param {object} opts - Options for the tone
+     * @param {string} opts.type       - Oscillator type (e.g. 'sine', 'triangle', 'square', 'sawtooth')
+     * @param {number} opts.freq       - Frequency in Hz
+     * @param {number} opts.peak       - Peak gain (0-1)
+     * @param {number} opts.attack     - Attack time in seconds
+     * @param {number} opts.decay      - Decay time in seconds
+     * @param {number} opts.sustain    - Sustain gain (0-1)
+     * @param {number} opts.sustainDur - Sustain duration in seconds
+     * @param {number} opts.release    - Release time in seconds
+     * @param {number} [opts.offset]   - Delay before the note starts in seconds
+     * @param {number} [opts.detune]   - Detune in cents
+     */
      * Initialise the AudioContext.
      * Must be called from a user-gesture handler (click / tap).
      */
